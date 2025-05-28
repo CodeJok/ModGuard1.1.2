@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -384,18 +386,6 @@
 
             <!-- Services Grid (Main & Admin Dashboard) -->
             <div class="services-grid">
-                <div class="service-card" data-title="Tickets">
-                    <div class="service-title">Tickets</div>
-                    <div class="service-status online">
-                        <span class="service-status-dot online"></span>
-                        <span>Online</span>
-                        <span class="admin-buttons" style="display:none;">
-                            <button onclick="setServiceStatus('Tickets','online', event)">Online</button>
-                            <button onclick="setServiceStatus('Tickets','offline', event)">Offline</button>
-                        </span>
-                    </div>
-                    <div class="service-desc">Ticket system is operational.</div>
-                </div>
                 <div class="service-card" data-title="Moderation">
                     <div class="service-title">Moderation</div>
                     <div class="service-status offline">
@@ -407,18 +397,6 @@
                         </span>
                     </div>
                     <div class="service-desc">Moderation features are currently unavailable.</div>
-                </div>
-                <div class="service-card" data-title="AntiProtection">
-                    <div class="service-title">AntiProtection</div>
-                    <div class="service-status online">
-                        <span class="service-status-dot online"></span>
-                        <span>Online</span>
-                        <span class="admin-buttons" style="display:none;">
-                            <button onclick="setServiceStatus('AntiProtection','online', event)">Online</button>
-                            <button onclick="setServiceStatus('AntiProtection','offline', event)">Offline</button>
-                        </span>
-                    </div>
-                    <div class="service-desc">AntiProtection system is operational.</div>
                 </div>
                 <div class="service-card" data-title="Operational">
                     <div class="service-title">Operational</div>
@@ -525,20 +503,74 @@
             <!-- Service Management -->
             <div class="services-grid">
                 <h3>Service Management</h3>
-                <!-- Repeat your service cards here as in the main grid, or use the same grid if shared -->
-                <!-- Example for one card: -->
-                <div class="service-card" data-title="Tickets">
-                    <div class="service-title">Tickets</div>
+                <!-- Removed Tickets -->
+                <!-- Removed AntiProtection -->
+                <div class="service-card" data-title="Moderation">
+                    <div class="service-title">Moderation</div>
+                    <div class="service-status offline">
+                        <span class="service-status-dot offline"></span>
+                        <span>Offline</span>
+                        <div class="admin-buttons">
+                            <button class="admin-btn" onclick="setServiceStatus('Moderation', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Moderation', 'offline')">Offline</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-title="Operational">
+                    <div class="service-title">Operational</div>
                     <div class="service-status online">
                         <span class="service-status-dot online"></span>
                         <span>Online</span>
                         <div class="admin-buttons">
-                            <button class="admin-btn" onclick="setServiceStatus('Tickets', 'online')">Online</button>
-                            <button class="admin-btn" onclick="setServiceStatus('Tickets', 'offline')">Offline</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Operational', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Operational', 'offline')">Offline</button>
                         </div>
                     </div>
                 </div>
-                <!-- Repeat for other services as needed -->
+                <div class="service-card" data-title="Not Operational">
+                    <div class="service-title">Not Operational</div>
+                    <div class="service-status offline">
+                        <span class="service-status-dot offline"></span>
+                        <span>Offline</span>
+                        <div class="admin-buttons">
+                            <button class="admin-btn" onclick="setServiceStatus('Not Operational', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Not Operational', 'offline')">Offline</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-title="Server Status">
+                    <div class="service-title">Server Status</div>
+                    <div class="service-status online">
+                        <span class="service-status-dot online"></span>
+                        <span>Online</span>
+                        <div class="admin-buttons">
+                            <button class="admin-btn" onclick="setServiceStatus('Server Status', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Server Status', 'offline')">Offline</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-title="Database Status">
+                    <div class="service-title">Database Status</div>
+                    <div class="service-status online">
+                        <span class="service-status-dot online"></span>
+                        <span>Online</span>
+                        <div class="admin-buttons">
+                            <button class="admin-btn" onclick="setServiceStatus('Database Status', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Database Status', 'offline')">Offline</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-title="Error Logs">
+                    <div class="service-title">Error Logs</div>
+                    <div class="service-status online">
+                        <span class="service-status-dot online"></span>
+                        <span>Online</span>
+                        <div class="admin-buttons">
+                            <button class="admin-btn" onclick="setServiceStatus('Error Logs', 'online')">Online</button>
+                            <button class="admin-btn" onclick="setServiceStatus('Error Logs', 'offline')">Offline</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Logs and Notes -->
@@ -568,9 +600,7 @@
 
         // Service names (must match data-title attributes)
         const SERVICE_NAMES = [
-            "Tickets",
             "Moderation",
-            "AntiProtection",
             "Operational",
             "Not Operational",
             "Server Status",
@@ -739,7 +769,7 @@
             showAlert("Problem description and notes saved!");
         }
 
-      
+
         function saveSystemLogs() {
             const systemLogs = document.getElementById('system-logs').value;
             if (systemLogs.trim() === "") {
@@ -763,8 +793,3 @@
 </body>
 
 </html>
-
-
-
-
-                    // Made by Hazel - ModguardSystems
