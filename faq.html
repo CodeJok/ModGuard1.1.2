@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ModGuard - FAQ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #000000;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        
+        .header {
+            background: #000000;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        
+        .header p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: #2c2f33;
+            border-radius: 4px;
+            transition: background 0.2s ease-in-out;
+        }
+        
+        .nav a:hover {
+            background: #b9bbbe;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .faq-item {
+            background: #23272a;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+            padding: 1.5rem;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .faq-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-desc {
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            .faq-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <h1>ModGuard FAQ</h1>
+            <p>Find answers to common questions about ModGuard.</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="faq.html">FAQ</a>
+            <a href="credits.html">Credits</a>
+            <a href="premium.html">Premium</a>
+            <a href="status.html">Status</a>
+        </nav>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-title">What is ModGuard?</div>
+            <div class="faq-desc">ModGuard is a Discord bot for Moderation and Server Protection.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">How do I set up ModGuard?</div>
+            <div class="faq-desc">Setting up ModGuard is simple. Follow our wizard guides for an easy setup.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Is ModGuard free?</div>
+            <div class="faq-desc">ModGuard offers both free and premium plans with varying features.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Which platforms does ModGuard support?</div>
+            <div class="faq-desc">ModGuard supports all platforms via Discord commands.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Can I customize filters?</div>
+            <div class="faq-desc">Yes, ModGuard allows customization of word, link, and spam filters.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Does ModGuard offer analytics?</div>
+            <div class="faq-desc">Currently, ModGuard does not offer analytics but may in the future.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">How secure is ModGuard?</div>
+            <div class="faq-desc">ModGuard is highly secure with robust protection mechanisms.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Can I integrate ModGuard with other tools?</div>
+            <div class="faq-desc">ModGuard does not support third-party integrations at the moment.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">What kind of support does ModGuard offer?</div>
+            <div class="faq-desc">ModGuard offers 24-hour hosting and support for users worldwide.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Is ModGuard suitable for large communities?</div>
+            <div class="faq-desc">Yes, ModGuard is suitable for communities of all sizes.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Does ModGuard support multilingual moderation?</div>
+            <div class="faq-desc">Multilingual moderation is supported to some extent.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-title">Who developed ModGuard?</div>
+            <div class="faq-desc">ModGuard was developed by Frosty, Plex_men, and A-train.</div>
+        </div>
+    </div>
+</body>
+
+</html>
