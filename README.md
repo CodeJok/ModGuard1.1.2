@@ -21,8 +21,11 @@ Currently private and in beta, ModGuard is being refined for release-readiness. 
 
 ## 🔧 Slash Commands
 
-- `/AutoMod` – Toggle and configure auto-moderation settings  
-- `/setlog [#channel]` – Assign a logging channel for ModGuard actions  
+We Cannot List Every Command but here are some....
+/Help
+/Kick
+/Ban
+/Warn
 
 All commands are built with Discord's latest **Application Command API** for speed, accuracy, and performance.
 
